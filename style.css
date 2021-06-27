@@ -1,0 +1,43 @@
+
+body
+{ 
+  background-color: rgba(0, 0, 0, 0.952);
+  margin: 0px;text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+body #input
+{
+  text-align: center; 
+  margin: 20px;
+  position:relative;top: 30%;
+}
+
+body .btn
+{
+ border: 2px solid white; 
+ margin: 20px;
+ font-family: 'Orbitron', sans-serif;
+ font-weight: bolder;
+ letter-spacing: 5px;
+ font-size: 20px;
+}  
+
+body .btn input[type="button"]:hover ,input[type="submit"]:hover
+{
+  cursor: pointer;
+}
+
+#score
+{
+  color: white;
+  position: relative; top:40% ;
+  font-weight: bolder;
+  font-size: 30px;
+}
+#score .label
+{
+  margin: 0px 40px;
+  
+}
