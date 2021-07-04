@@ -1,45 +1,55 @@
-const playerScore = document.querySelector("#playerScore");
-const compScore = document.querySelector("#compScore");
+let playerScore = document.querySelector("#playerScore");
+let compScore = document.querySelector("#compScore");
+//const selection = document.querySelectorAll("button")
+
+//selection.forEach(button => button.addEventListener('click', playerSelect) )
 
 //step-1 Randomly return R/P/S
 
-const Rock = document.querySelector("#rock");
-const Paper = document.querySelector("#paper");
-const Scissors = document.querySelector("#scissors");
 
-var compChoice = [Rock, Paper,Scissors];
+let compChoice = [{choice: 'Rock', value: 0}, {choice: 'Paper', value: 1}, {choice: 'Scissors', value: 2}];
 function computerSelection()
 {
     let result=compChoice[Math.floor(Math.random()*compChoice.length)];
     return result;
 }
 
-function playerSelection()
-{
-    let playerChoice = [Rock, Paper,Scissors];
-    return playerChoice;
-}
-//step-2 Function that play 1 Round R/P/S and written string
+console.log(computerSelection());
+ 
+//let choice = document.getElementsByClassName(".btn")[0,1,2].innerHTML;
 
-function playRound(playerChoice , compChoice)
+function playerSelect0()
 {
-   playerChoice = playerSelection();
-   compChoice = computerSelection();
-
-    if(playerChoice==Rock) 
-    {
-      if(compChoice==Scissors)
-       {++playerScore;
-           alert("You Win! Rock beats Scissors.");
-       }else if(compChoice==Paper)
-        {++compScore;
-           alert("You lose! Paper beats Rock.");
-        }else{alert("TIE");}
-    }
+    document.getElementsByClassName(".btn")[1];
+    return 'Rock'
 }
 
-/*function game()
+function playerSelect1()
 {
-    console.log(playRound());
-    console.log(playRound());
-}*/
+  document.getElementsByClassName(".btn")[1];
+  return 'Paper'
+}
+
+function playerSelect2()
+{
+   document.getElementsByClassName(".btn")[2];
+   return 'Scissors'
+}
+
+
+function playRound(playerChose,compChose)
+{
+   playerChose = playerSelect0;
+   playerChose = playerSelect1;
+   playerChose = playerSelect2;
+   compChose = computerSelection
+}
+
+
+
+
+
+
+
+
+
